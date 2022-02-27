@@ -1,0 +1,9 @@
+function multiply(a, b, c) {
+    if (typeof c !== "undefined") {
+        return a * b * c;
+    }
+    else {
+        return a * b;
+    }
+}
+console.log(multiply(4, 5, 5));
