@@ -1,10 +1,9 @@
 
+//this function extract all the vowels in the first and then add the other constanct after the vowels
+
 function filterVowels(text) {
-    console.log(text);
     const vowels: any = 'aeiou';
     let constanct: any = [];
-
-    console.log(text.length);
     for (let i = 0; i < text.length - 1; i++) {
         if (vowels.includes(text[i])) {
             console.log(text[i])
