@@ -22,5 +22,4 @@ var GettingName = /** @class */ (function () {
     return GettingName;
 }());
 var firstCustomer = new GettingName('Moath', 'Ahmad');
-console.log(this);
 firstCustomer.get();

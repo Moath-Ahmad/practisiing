@@ -24,5 +24,4 @@ class GettingName {
 }
 
 let firstCustomer = new GettingName('Moath', 'Ahmad');
-console.log(this)
 firstCustomer.get();
