@@ -1,14 +1,26 @@
-// checking if the numbers is positve.
-function isPostive(num) {
-    if (num > 0) {
-        return "Yes";
+var GettingName = /** @class */ (function () {
+    function GettingName(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        console.log(this);
     }
-    else if (num < 0) {
-        return " Negtive error";
-    }
-    else {
-        return 'Zero error';
-    }
-}
-;
-console.log(isPostive(7));
+    ;
+    GettingName.prototype.get = function () {
+        var _this = this;
+        console.log("Welcome ".concat(this.firstName, " ").concat(this.lastName));
+        console.log(this);
+        var c = function (firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            console.log('-----', this.firstName, this.lastName);
+        };
+        var c2 = function () { return console.log('-----', _this.firstName, _this.lastName); };
+        c(this.firstName, this.lastName);
+        c2();
+    };
+    ;
+    return GettingName;
+}());
+var firstCustomer = new GettingName('Moath', 'Ahmad');
+console.log(this);
+firstCustomer.get();

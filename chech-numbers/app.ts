@@ -1,15 +1,28 @@
-// checking if the numbers is positve.
+class GettingName {
+    firstName: string;
+    lastName: string;
 
-function isPostive(num) {
-    if (num > 0) {
-        return "Yes";
-    }
-    else if (num < 0) {
-        return " Negtive error";
-    }
-    else {
-        return 'Zero error';
-    }
-};
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        console.log(this)
+    };
+    get() {
+        console.log(`Welcome ${this.firstName} ${this.lastName}`);
+        console.log(this);
+        let c = function (firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            console.log('-----', this.firstName, this.lastName)
+        }
 
-console.log(isPostive(7));
+        let c2 = () => console.log('-----', this.firstName, this.lastName)
+
+        c(this.firstName, this.lastName);
+        c2();
+    };
+}
+
+let firstCustomer = new GettingName('Moath', 'Ahmad');
+console.log(this)
+firstCustomer.get();
