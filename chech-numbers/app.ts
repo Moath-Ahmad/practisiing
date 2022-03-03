@@ -23,5 +23,13 @@ class GettingName {
     };
 }
 
+class WorkType extends GettingName {
+    workType: string;
+    constructor(workType) {
+        super(workType);
+
+
+    }
+}
 let firstCustomer = new GettingName('Moath', 'Ahmad');
 firstCustomer.get();
